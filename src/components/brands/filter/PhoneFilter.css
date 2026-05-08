@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+:root {
+  --fw-red:       #dc2626;
+  --fw-red-dark:  #b91c1c;
+  --fw-red-light: #ef4444;
+  --fw-red-bg:    #fef2f2;
+  --fw-red-ring:  rgba(220, 38, 38, 0.25);
+  --fw-border:    #ebebeb;
+  --fw-bg:        #ffffff;
+  --fw-surface:   #fafafa;
+  --fw-text:      #1a1a1a;
+  --fw-muted:     #999;
+}
+
+/* =====================================================
+   ROOT WRAPPER
+===================================================== */
+
+.fw-wrap {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--fw-bg);
+  border: 1px solid var(--fw-border);
+  border-radius: 20px;
+  overflow: visible;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  max-width: 1200px;
+  margin: 20px auto 24px;
+}
+
+/* =====================================================
+   HEADER BAR
+===================================================== */
+.fw-header {
+  background: linear-gradient(
+    135deg,
+    #1a0000 0%,
+    #6b0000 45%,
+    #dc2626 80%,
+    #ef4444 100%
+  );
+  border-radius: 20px 20px 0 0;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fw-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fw-header-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.fw-header-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.fw-header-sub {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.58);
+  margin-top: 3px;
+}
+
+.fw-header-badge {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 13px;
+  border-radius: 20px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.fw-header-badge.active {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+/* =====================================================
+   BODY
+===================================================== */
+.fw-body {
+  padding: 18px 20px 18px;
+}
+
+.fw-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--fw-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+/* =====================================================
+   BRAND BUTTONS
+===================================================== */
+.fw-brands {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-bottom: 18px;
+  border-bottom: 1px dashed var(--fw-border);
+  margin-bottom: 18px;
+}
+
+.fw-brand-btn {
+  position: relative;
+  height: 46px;
+  min-width: 82px;
+  padding: 7px 10px;
+  border-radius: 13px;
+  background: var(--fw-surface);
+  border: 1.5px solid var(--fw-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  flex-shrink: 0;
+}
+
+/* Gradient overlay on active */
+.fw-brand-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--fw-red), var(--fw-red-light));
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: 11px;
+}
+
+.fw-brand-btn img {
+  max-height: 26px;
+  max-width: 58px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  transition: filter 0.2s;
+}
+
+.fw-brand-btn:hover {
+  border-color: var(--fw-red-ring);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.15);
+}
+
+.fw-brand-btn.active {
+  border-color: transparent;
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+  transform: translateY(-2px);
+}
+
+.fw-brand-btn.active::before { opacity: 1; }
+.fw-brand-btn.active img     { filter: brightness(0) invert(1); }
+
+/* Tick badge */
+.fw-brand-tick {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: var(--fw-red);
+  font-weight: 900;
+  animation: tickIn 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes tickIn {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+
+/* "Tất cả" button */
+.fw-brand-all {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background: var(--fw-surface);
+  border: 1.5px solid var(--fw-border);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--fw-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.fw-brand-all:hover,
+.fw-brand-all.active {
+  background: var(--fw-red);
+  border-color: var(--fw-red);
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(220, 38, 38, 0.28);
+}
+
+/* =====================================================
+   DROPDOWN ROW
+===================================================== */
+.fw-filters {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* Section wrapper */
+.fw-sec { position: relative; flex-shrink: 0; }
+
+/* Trigger button */
+.fw-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 13px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--fw-surface);
+  border: 1.5px solid var(--fw-border);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--fw-text);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.fw-btn:hover {
+  border-color: var(--fw-red-ring);
+  background: var(--fw-red-bg);
+  color: var(--fw-red);
+}
+
+.fw-btn.open {
+  border-color: var(--fw-red);
+  background: var(--fw-red-bg);
+  color: var(--fw-red);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Selected state */
+.fw-btn.sel {
+  background: linear-gradient(135deg, var(--fw-red), var(--fw-red-light));
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+}
+
+.fw-btn.sel .fw-chevron { stroke: #fff; }
+
+/* Chevron */
+.fw-chevron {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.fw-chevron.open { transform: rotate(180deg); }
+
+/* Count badge inside trigger */
+.fw-count {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+  font-size: 10px;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ── Dropdown panel ── */
+.fw-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 200;
+  background: var(--fw-bg);
+  border: 1.5px solid var(--fw-border);
+  border-radius: 16px;
+  padding: 10px;
+  min-width: 200px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.13);
+  animation: fwPanelIn 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes fwPanelIn {
+  from { opacity: 0; transform: translateY(-8px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.fw-opts {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.fw-opt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 11px;
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--fw-text);
+  background: none;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: all 0.15s;
+}
+
+.fw-opt:hover  { background: var(--fw-red-bg); color: var(--fw-red); }
+.fw-opt.on     { background: var(--fw-red-bg); border-color: var(--fw-red-ring); color: var(--fw-red); }
+
+/* Checkbox */
+.fw-chk {
+  width: 17px;
+  height: 17px;
+  border-radius: 5px;
+  border: 1.5px solid #ddd;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.15s;
+  font-size: 10px;
+  font-weight: 900;
+  color: transparent;
+  position: relative;
+}
+
+.fw-opt.on .fw-chk {
+  background: var(--fw-red);
+  border-color: var(--fw-red);
+  color: #fff;
+}
+
+.fw-opt.on .fw-chk::after {
+  content: '✓';
+  font-size: 10px;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* =====================================================
+   ACTIVE TAGS
+===================================================== */
+.fw-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--fw-border);
+}
+
+.fw-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px 5px 12px;
+  background: linear-gradient(135deg, #fef2f2, #fff5f5);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--fw-red);
+  animation: tagIn 0.2s ease;
+}
+
+@keyframes tagIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.fw-tag b {
+  font-weight: 700;
+  opacity: 0.65;
+}
+
+.fw-tag-x {
+  border: none;
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--fw-red);
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0;
+  margin-left: 2px;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.fw-tag-x:hover {
+  background: var(--fw-red);
+  color: #fff;
+}
+
+.fw-clear {
+  height: 30px;
+  padding: 0 13px;
+  border-radius: 8px;
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  background: transparent;
+  color: var(--fw-red);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fw-clear:hover {
+  background: var(--fw-red);
+  color: #fff;
+  border-color: var(--fw-red);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 768px) {
+  .fw-wrap  { border-radius: 14px; }
+  .fw-header { padding: 12px 16px; border-radius: 14px 14px 0 0; }
+  .fw-header-title { font-size: 14px; }
+  .fw-body  { padding: 14px 14px 14px; }
+  .fw-brand-btn { height: 40px; min-width: 70px; }
+  .fw-brand-btn img { max-height: 22px; max-width: 50px; }
+  .fw-btn   { font-size: 12.5px; padding: 0 11px; height: 34px; }
+  .fw-panel { min-width: 175px; }
+}
+
+@media (max-width: 480px) {
+  .fw-header-sub { display: none; }
+  .fw-brands { gap: 6px; }
+  .fw-brand-btn { height: 36px; min-width: 60px; padding: 5px 8px; }
+  .fw-filters { gap: 6px; }
+  .fw-btn { font-size: 12px; padding: 0 9px; height: 32px; }
+  .fw-opt { padding: 8px 9px; font-size: 12.5px; }
+}
