@@ -1,0 +1,287 @@
+[
+  
+  {
+    "id": 1,
+    "brand": "Apple",
+    "title": "iPhone 16 Pro Max",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/i/p/iphone-16-pro-max_3_.png",
+    "discount": "Giảm 5%",
+    "price": "33.990.000₫",
+    "oldPrice": "35.990.000₫",
+    "category": "phone",
+    "nation": "Mỹ",
+
+    "display": "6.9 inches",
+    "screenTech": "Super Retina XDR",
+    "ram": "8 GB",
+    "rom": "256 GB",
+    "chip": "A18 Pro",
+    "camera": "48MP + 12MP",
+    "battery": "4670mAh",
+    "charging": "Sạc nhanh 30W",
+
+    "description": "iPhone 16 Pro Max dùng chip A18 Pro, camera 48MP, màn hình 6.9 inch và pin 4670mAh."
+  },
+
+  {
+    "id": 2,
+    "brand": "Apple",
+    "title": "iPhone 16",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/i/p/iphone-16_3_.png",
+    "discount": "Giảm 4%",
+    "price": "21.990.000₫",
+    "oldPrice": "23.990.000₫",
+    "category": "phone",
+    "nation": "Mỹ",
+
+    "display": "6.1 inches",
+    "screenTech": "Super Retina XDR",
+    "ram": "6 GB",
+    "rom": "128 GB",
+    "chip": "A18",
+    "camera": "48MP",
+    "battery": "3400mAh",
+    "charging": "Sạc nhanh 25W",
+
+    "description": "iPhone 16 trang bị chip A18, camera 48MP và màn hình Super Retina 6.1 inch."
+  },
+
+  {
+    "id": 3,
+    "brand": "Apple",
+    "title": "iPhone 15 Pro Max",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/i/p/iphone-15-pro-max_2.png",
+    "discount": "Giảm 3%",
+    "price": "28.990.000₫",
+    "oldPrice": "32.990.000₫",
+    "category": "phone",
+    "nation": "Mỹ",
+
+    "display": "6.7 inches",
+    "screenTech": "Super Retina XDR",
+    "ram": "8 GB",
+    "rom": "256 GB",
+    "chip": "A17 Pro",
+    "camera": "48MP + Tele 5X",
+    "battery": "4422mAh",
+    "charging": "Sạc nhanh 27W",
+
+    "description": "iPhone 15 Pro Max trang bị chip A17 Pro, camera Tele 5X và khung Titan."
+  },
+
+  
+  {
+    "id": 4,
+    "brand": "Samsung",
+    "title": "Samsung Galaxy S25 Ultra",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/d/i/dien-thoai-samsung-galaxy-s25-ultra_1__1.png",
+    "discount": "Giảm 8%",
+    "price": "25.490.000₫",
+    "oldPrice": "27.690.000₫",
+    "category": "phone",
+    "nation": "Hàn Quốc",
+
+    "display": "6.8 inches",
+    "screenTech": "Dynamic AMOLED 2X",
+    "ram": "12 GB",
+    "rom": "256 GB",
+    "chip": "Exynos 9900",
+    "camera": "200MP + 50MP",
+    "battery": "5000mAh",
+    "charging": "Sạc nhanh 45W",
+
+    "description": "Samsung S25 Ultra có camera 200MP, chip Exynos 9900 và màn hình Dynamic AMOLED 2X."
+  },
+
+  {
+    "id": 5,
+    "brand": "Samsung",
+    "title": "Samsung Galaxy S24 Ultra",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/2/s24-ultra-1_2.png",
+    "discount": "Giảm 6%",
+    "price": "20.990.000₫",
+    "oldPrice": "26.990.000₫",
+    "category": "phone",
+    "nation": "Hàn Quốc",
+
+    "display": "6.8 inches",
+    "screenTech": "Dynamic AMOLED 2X",
+    "ram": "12 GB",
+    "rom": "256 GB",
+    "chip": "Snapdragon 8 Gen 3",
+    "camera": "200MP",
+    "battery": "5000mAh",
+    "charging": "Sạc nhanh 45W",
+
+    "description": "Galaxy S24 Ultra sử dụng Snapdragon 8 Gen 3 và hệ thống AI mạnh mẽ."
+  },
+
+  {
+    "id": 6,
+    "brand": "Samsung",
+    "title": "Samsung Galaxy A55",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-a55.png",
+    "discount": "Giảm 7%",
+    "price": "8.490.000₫",
+    "oldPrice": "9.490.000₫",
+    "category": "phone",
+    "nation": "Hàn Quốc",
+
+    "display": "6.6 inches",
+    "screenTech": "Super AMOLED 120Hz",
+    "ram": "8 GB",
+    "rom": "128 GB",
+    "chip": "Exynos 1480",
+    "camera": "50MP",
+    "battery": "5000mAh",
+    "charging": "Sạc nhanh 25W",
+
+    "description": "Samsung A55 với màn hình AMOLED 120Hz và camera 50MP."
+  },
+
+  
+  {
+    "id": 7,
+    "brand": "Xiaomi",
+    "title": "Xiaomi 14 Ultra",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/x/i/xiaomi-14-ultra_2_.png",
+    "discount": "Giảm 10%",
+    "price": "22.490.000₫",
+    "oldPrice": "24.990.000₫",
+    "category": "phone",
+    "nation": "Trung Quốc",
+
+    "display": "6.73 inches",
+    "screenTech": "LTPO AMOLED",
+    "ram": "16 GB",
+    "rom": "512 GB",
+    "chip": "Snapdragon 8 Gen 3",
+    "camera": "50MP Leica",
+    "battery": "5000mAh",
+    "charging": "Sạc nhanh 90W",
+
+    "description": "Xiaomi 14 Ultra với camera Leica, hiệu năng mạnh, sạc nhanh 90W."
+  },
+
+  {
+    "id": 8,
+    "brand": "Xiaomi",
+    "title": "Xiaomi 13T Pro",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/x/i/xiaomi-13t-pro_2_.png",
+    "discount": "Giảm 12%",
+    "price": "12.490.000₫",
+    "oldPrice": "15.990.000₫",
+    "category": "phone",
+    "nation": "Trung Quốc",
+
+    "display": "6.67 inches",
+    "screenTech": "AMOLED 144Hz",
+    "ram": "12 GB",
+    "rom": "256 GB",
+    "chip": "Dimensity 9200+",
+    "camera": "50MP Leica",
+    "battery": "5000mAh",
+    "charging": "Sạc nhanh 120W",
+
+    "description": "Xiaomi 13T Pro có camera Leica và sạc nhanh 120W."
+  },
+
+  
+
+
+
+  {
+    "id": 9,
+    "brand": "OPPO",
+    "title": "OPPO Find X7 Ultra",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/f/i/find-x7-ultra_3_.png",
+    "discount": "Giảm 7%",
+    "price": "21.990.000₫",
+    "oldPrice": "23.990.000₫",
+    "category": "phone",
+    "nation": "Trung Quốc",
+
+    "display": "6.82 inches",
+    "screenTech": "AMOLED ProXDR",
+    "ram": "12 GB",
+    "rom": "256 GB",
+    "chip": "Snapdragon 8 Gen 3",
+    "camera": "50MP",
+    "battery": "5000mAh",
+    "charging": "Sạc nhanh 100W",
+
+    "description": "OPPO Find X7 Ultra với màn ProXDR và sạc nhanh 100W."
+  },
+
+  {
+    "id": 10,
+    "brand": "OPPO",
+    "title": "OPPO Reno 11",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/r/e/reno11-1.png",
+    "discount": "Giảm 9%",
+    "price": "8.990.000₫",
+    "oldPrice": "9.990.000₫",
+    "category": "phone",
+    "nation": "Trung Quốc",
+
+    "display": "6.7 inches",
+    "screenTech": "AMOLED 120Hz",
+    "ram": "8 GB",
+    "rom": "256 GB",
+    "chip": "Dimensity 7050",
+    "camera": "50MP",
+    "battery": "5000mAh",
+    "charging": "67W",
+
+    "description": "OPPO Reno 11 thiết kế mỏng đẹp, camera 50MP."
+  },
+
+  
+
+  
+  {
+    "id": 11,
+    "brand": "Vivo",
+    "title": "Vivo X100 Pro",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/v/i/vivo-x100-pro.png",
+    "discount": "Giảm 6%",
+    "price": "19.990.000₫",
+    "oldPrice": "21.990.000₫",
+    "category": "phone",
+    "nation": "Trung Quốc",
+
+    "display": "6.78 inches",
+    "screenTech": "AMOLED 120Hz",
+    "ram": "12 GB",
+    "rom": "256 GB",
+    "chip": "Dimensity 9300",
+    "camera": "50MP ZEISS",
+    "battery": "5400mAh",
+    "charging": "Sạc nhanh 120W",
+
+    "description": "Vivo X100 Pro dùng camera ZEISS và chip Dimensity 9300."
+  },
+
+  {
+    "id": 12,
+    "brand": "Vivo",
+    "title": "Vivo V30",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/v/i/vivo-v30-1.png",
+    "discount": "Giảm 8%",
+    "price": "7.990.000₫",
+    "oldPrice": "8.990.000₫",
+    "category": "phone",
+    "nation": "Trung Quốc",
+
+    "display": "6.78 inches",
+    "screenTech": "AMOLED 120Hz",
+    "ram": "8 GB",
+    "rom": "128 GB",
+    "chip": "Snapdragon 7 Gen 3",
+    "camera": "50MP",
+    "battery": "5000mAh",
+    "charging": "Sạc nhanh 80W",
+
+    "description": "Vivo V30 có camera 50MP và thiết kế siêu mỏng."
+  }
+]
