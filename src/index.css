@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  background-color: rgb(242, 245, 246) !important;
+  padding-top: 105px;
+}
+
+
+@keyframes fadeZoom {
+  0%   { opacity: 0; transform: scale(1.08); filter: blur(6px) brightness(0.85); }
+  60%  { opacity: 1; transform: scale(1.02); filter: blur(2px) brightness(1); }
+  100% { opacity: 1; transform: scale(1);    filter: blur(0) brightness(1); }
+}
+
+
+/* json-server --watch db.json --port 3001  Lệnh chạy API */
+
+
