@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+
+/* =====================================================
+   ROOT — gradient đỏ đậm → trắng xám
+===================================================== */
+.bn-root {
+  font-family: 'DM Sans', sans-serif;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    #6b0000  0%,
+    #9b0404  10%,
+    #c90404  22%,
+    #dc2626  34%,
+    #e85050  46%,
+    #ef9999  58%,
+    #f5c8c8  68%,
+    #f9e0e0  77%,
+    #faf0f0  85%,
+    #f6f1f1  91%,
+    rgb(242, 245, 246) 100%
+  );
+  padding: 22px 24px 48px;  /* thêm padding bottom để gradient kịp fade */
+}
+
+.bn-inner {
+  max-width: 1160px;
+  margin: 30px auto 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+
+}
+
+/* Fade overlay đáy — hòa màu với nền rgb(242,245,246) bên dưới */
+.bn-inner::after {
+  content: '';
+  position: absolute;
+  bottom: -48px;
+  left: -24px;
+  right: -24px;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgb(242, 245, 246) 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* =====================================================
+   MAIN SLIDER
+===================================================== */
+.bn-main {
+  position: relative;
+  width: 100%;
+  /* Không border-radius, không box-shadow — ảnh nổi tự nhiên */
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Slide track */
+.bn-main-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.bn-main-img {
+  min-width: 100%;
+  width: 100%;
+  height: auto;           /* giữ đúng tỉ lệ ảnh gốc, không crop */
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+
+
+/* ── Nav buttons ── */
+.bn-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.88);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.22s ease;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(4px);
+}
+
+.bn-main:hover .bn-nav {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bn-nav:hover {
+  background: #fff;
+  color: #dc2626;
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+}
+
+.bn-nav-l { left: 14px; }
+.bn-nav-r { right: 14px; }
+
+/* ── Dots ── */
+.bn-dots {
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 3;
+}
+
+.bn-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.bn-dot:hover { background: rgba(255, 255, 255, 0.8); }
+
+.bn-dot.active {
+  background: #fff;
+  width: 22px;
+  border-radius: 4px;
+}
+
+/* =====================================================
+   SMALL SLIDERS ROW
+===================================================== */
+.bn-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 50px;
+}
+
+.bn-small {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: transparent;
+  transition: transform 0.25s ease;
+}
+
+.bn-small:hover {
+  transform: translateY(-2px);
+}
+
+/* Slide track */
+.bn-small-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.bn-small-img {
+  min-width: 100%;
+  width: 100%;
+  height: auto;            /* hiện đầy đủ ảnh, không crop */
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* ── Small nav buttons ── */
+.bn-snav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.82);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.bn-small:hover .bn-snav {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bn-snav:hover {
+  background: #fff;
+  color: #dc2626;
+  transform: translateY(-50%) scale(1.12);
+}
+
+.bn-snav-l { left: 10px; }
+.bn-snav-r { right: 10px; }
+
+/* ── Small dots ── */
+.bn-sdots {
+  position: absolute;
+  bottom: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  z-index: 3;
+}
+
+.bn-sdot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.22s ease;
+}
+
+.bn-sdot:hover { background: rgba(255, 255, 255, 0.8); }
+
+.bn-sdot.active {
+  background: #fff;
+  width: 15px;
+  border-radius: 3px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 768px) {
+  .Reponsive_mobile { display: none !important; }
+}
+
+@media (max-width: 1024px) {
+  .bn-root { padding: 16px 16px 28px; }
+  .bn-main { aspect-ratio: 16 / 6; }
+  .bn-nav  { width: 34px; height: 34px; }
+}
+
+@media (max-width: 600px) {
+  .bn-row  { grid-template-columns: 1fr; gap: 10px; }
+  .bn-root { padding: 12px 12px 20px; gap: 10px; }
+  .bn-main { border-radius: 14px; aspect-ratio: 16 / 7; }
+  .bn-small{ border-radius: 12px; }
+}

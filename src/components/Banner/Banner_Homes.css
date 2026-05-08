@@ -1,0 +1,162 @@
+/* ============================================================
+   WRAPPER CHUNG
+   ============================================================ */
+.bp-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.bp-row {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+  max-width: 1100px;
+  /* margin-bottom: 20px; */
+}
+
+/* ============================================================
+   SLIDER BOX
+   ============================================================ */
+.bp-slider {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #fff;
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.25s ease;
+}
+
+.bp-slider:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ============================================================
+   SLIDE CONTAINER
+   ============================================================ */
+.bp-slide-container {
+  width: 100%;
+  height: auto; /* Cho container tự giãn */
+  padding: 0;
+}
+
+/* ============================================================
+   ẢNH SLIDE - HIỂN THỊ ĐẦY ĐỦ
+   ============================================================ */
+/* ============================================================
+   ẢNH SLIDE - CHUYỂN ẢNH ĐẸP (Fade + Zoom + Blur)
+   ============================================================ */
+.bp-slide-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+
+  /* Hiệu ứng mới */
+  opacity: 0;
+  transform: scale(1.08);
+  filter: blur(6px) brightness(0.85);
+
+  animation: bpFadeIn 0.7s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+@keyframes bpFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.08);
+    filter: blur(6px) brightness(0.85);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.02);
+    filter: blur(2px) brightness(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0) brightness(1);
+  }
+}
+
+
+
+
+
+/* ============================================================
+   NÚT ĐIỀU HƯỚNG < >
+   ============================================================ */
+.bp-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  /* Ẩn mặc định — hiển thị khi hover */
+  opacity: 0;
+  visibility: hidden;
+  transition: 
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      background 0.25s ease;
+}
+
+/* Hiện nút khi hover slider */
+.bp-slider:hover .bp-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bp-btn:hover {
+  background: rgba(0,0,0,0.65);
+}
+
+/* Vị trí nút */
+.bp-btn-left {
+  left: 10px;
+}
+
+.bp-btn-right {
+  right: 10px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .bp-row {
+    flex-direction: column;
+  }
+
+  .bp-slide-container,
+  .bp-slide-img {
+    height: 170px;
+  }
+
+  .bp-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+}
