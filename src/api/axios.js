@@ -1,7 +1,16 @@
 import axios from "axios";
 
+/*
+ * baseURL ưu tiên đọc từ env VITE_API_URL (set ở Vercel cho production).
+ * Fallback localhost:5000/api nếu chưa có env (dev local).
+ *
+ * Lưu ý: Vite chỉ inject env có prefix "VITE_" vào client bundle.
+ *        Sửa env xong phải RESTART dev server (Vite không hot-reload env).
+ */
+const baseURL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+
 const axiosClient = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL,
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
